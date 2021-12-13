@@ -1,5 +1,5 @@
 ### Init Eslint 
-Initialize eslint in the project(在项目里安装eslint)
+Initialize eslint and jestin the project(在项目里安装eslint和jest)
 #### use
-`npx @marchyang/init-eslint`
+`npx @marchyang/init-eslint-jest`
 

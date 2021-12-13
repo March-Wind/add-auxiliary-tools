@@ -79,7 +79,7 @@ const tasks = new Listr<Ctx>([
             }
             configObj.scripts = {
               ...configObj.scripts,
-              "eslint2": "eslint ./src/**/* --fix"
+              "eslint": "eslint ./src/**/* --fix"
             }
             fs.writeFileSync(packagePath, JSON.stringify(configObj, null, 4), { encoding: 'utf-8' });
           }
