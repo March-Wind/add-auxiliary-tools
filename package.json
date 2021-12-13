@@ -1,11 +1,11 @@
 {
-  "name": "@marchyang/init-eslint",
+  "name": "@marchyang/init-eslint-jest",
   "version": "1.2.3",
   "description": "",
   "main": "./lib/index.js",
   "bin": "./lib/index.js",
   "scripts": {
-    "build": "tsc && rollup -c && cp ./.eslintrc.js ./lib/",
+    "build": "tsc && rollup -c && cp ./.eslintrc.js ./lib/ && cp ./jest.config.ts ./lib/",
     "ts:run": "TS_NODE_PROJECT=./tsconfig.json node --loader ts-node/esm ./src/index.ts",
     "ts:debugger": "TS_NODE_PROJECT=./tsconfig.json node --inspect-brk  --loader ts-node/esm  ./src/index.ts",
     "prepublish": "npm run build "
