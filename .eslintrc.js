@@ -1,48 +1,44 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  plugins: [
-    '@typescript-eslint',
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
     "react",
     "react-hooks"
   ],
-  extends: [
+  "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    'plugin:@typescript-eslint/recommended',
-    //   "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:react/jsx-runtime",
     "plugin:jsx-control-statements/recommended",
-    "plugin:react-hooks/recommended",
+    "plugin:react-hooks/recommended"
   ],
-  env: {
-    browser: true,
-    es6: true,
-    node: true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
     "jsx-control-statements/jsx-control-statements": true
   },
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
     "JSX": true,
-    parrser: 'babel-eslint',
-    // 'jest/globals': true,
+    "parrser": "babel-eslint"
   },
-  rules: {
-    "no-undef": "error", // 禁止使用未定义变量
-    "no-constant-condition": "error", // 禁止条件中的常量表达式
-    "no-unreachable": "error", // 禁止在 return、throw、continue 和 break 语句后出现不可达代码
-    "indent": ["error", 2], // 缩进, 使用空格缩进：https://blog.csdn.net/qq_35132089/article/details/105887879
+  "rules": {
+    "no-undef": "error",
+    "no-constant-condition": "error",
+    "no-unreachable": "error",
+    "indent": [
+      "error",
+      2,
+      { SwitchCase: 1 }
+    ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-
-    // "no-param-reassign": [
-    //     "error",
-    //     {
-    //         "props": false
-    //     }
-    // ],
-    // "no-undef": 2,
-    "jsx-control-statements/jsx-jcs-no-undef": ['off'],
+    "jsx-control-statements/jsx-jcs-no-undef": [
+      "off"
+    ],
     "no-console": [
       1,
       {
@@ -61,10 +57,6 @@ module.exports = {
     "import/first": 0,
     "no-var": 1,
     "no-unused-expressions": 0,
-    // "semi": [
-    //     1,
-    //     "always"
-    // ],
     "no-trailing-spaces": 0,
     "eol-last": 0,
     "no-restricted-syntax": 0,
@@ -91,7 +83,7 @@ module.exports = {
     "@typescript-eslint/no-non-null-assertion": 0,
     "@typescript-eslint/ban-types": 0,
     "@typescript-eslint/no-explicit-any": 0,
-    "@typescript-eslint/no-empty-interface": 0, // 允许空的interface
+    "@typescript-eslint/no-empty-interface": 0,
     "@typescript-eslint/no-this-alias": [
       0,
       "self"
@@ -130,13 +122,30 @@ module.exports = {
     "consistent-this": [
       0,
       "self"
-    ],
+    ]
   },
-  overrides: [
+  "overrides": [
     {
-      files: ["**/*.md"],
-      parser: 'markdown-eslint-parser',
+      "files": [
+        "**/*.md"
+      ],
+      "parser": "markdown-eslint-parser"
     },
-
-  ],
+    {
+      "files": [
+        "__tests__/**/*.test.ts",
+        "__tests__/**/*.test.js",
+        "setup.js"
+      ],
+      "plugins": [
+        "jest"
+      ],
+      "extends": [
+        "plugin:jest/recommended"
+      ],
+      "parserOptions": {
+        "jest/globals": true
+      }
+    }
+  ]
 }

@@ -47,7 +47,8 @@ const tasks = new Listr<Ctx>([
               '@typescript-eslint/parser',
               'eslint-plugin-react',
               'eslint-plugin-react-hooks',
-              'eslint-plugin-jsx-control-statements'
+              'eslint-plugin-jsx-control-statements',
+              'markdown-eslint-parser'
             ])
           }
         },
