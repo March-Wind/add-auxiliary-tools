@@ -1,6 +1,7 @@
 {
   "ts-node": {
     "transpileOnly": true,
+    "compiler": "typescript",
     "moduleTypes": {
       "src/**/*": "esm",
       "src": "esm"
@@ -19,12 +20,18 @@
     "jsx": "react",
     "baseUrl": "./",
     "skipLibCheck": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "plugins": [
+			{
+				"transform": "./plugin.js",
+				"before": true,
+			}
+		]
   },
   "exclude": [
     "node_modules",
     "lib",
-    "jest.config.ts"
+    "src/template/jest.config.ts"
   ],
   "include": [
     "**/*"
