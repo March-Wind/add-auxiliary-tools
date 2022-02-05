@@ -1,14 +1,9 @@
 {
   "name": "@marchyang/add-auxiliary-tools",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "给项目加装辅助工具eslint,jest,stylelint",
   "main": "./lib/index.mjs",
-  "bin": {
-    "all": "./lib/index.mjs",
-    "eslint": "./lib/eslint.mjs",
-    "jest": "./lib/jest.mjs",
-    "stylelint": "./lib/stylelint.mjs"
-  },
+  "bin": "./lib/index.mjs",
   "scripts": {
     "tsc": "tsc",
     "build": "tsc && rollup -c && cp -r ./src/template ./lib/",

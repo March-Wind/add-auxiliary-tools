@@ -7,6 +7,7 @@ import chalk from 'chalk';
 import eslintTask from './eslint.js'
 import pettierTask from './prettier.js'
 import jestTask from './jest.js';
+import commitLintTask from './commit.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 // const vscode = {
@@ -243,6 +244,12 @@ const tasks = new Listr<Ctx>([
     title: 'add jest',
     task: () => {
       return jestTask;
+    }
+  },
+  {
+    title: 'add lint in the commit phase',
+    task: () => {
+      return commitLintTask;
     }
   }
 ])

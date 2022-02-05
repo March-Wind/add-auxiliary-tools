@@ -16,12 +16,16 @@ const vscode = {
   ],
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll": true
   },
   "editor.tabSize": 2,
   "eslint.options": {
-    "overrideConfigFile": ".eslintrc.js", // 新版本是overrideConfigFile，旧版本是configFile
-  }
+    "overrideConfigFile": ".eslintrc.js"
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "scss", "less"]
 }
 
 interface Ctx {
