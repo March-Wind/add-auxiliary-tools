@@ -81,13 +81,11 @@ const tasks = new Listr<Ctx>([
           }
           configObj["lint-staged"] = {
             ...configObj["lint-staged"],
-            "lint-staged": {
-              "**.{js,jsx,ts,tsx}": [
-                "eslint --fix",
-                "prettier --config .prettierrc --write"
-              ],
-              "*.+(css|less|scss|sass)": "stylelint --fix"
-            }
+            "**.{js,jsx,ts,tsx}": [
+              "eslint --fix",
+              "prettier --config .prettierrc --write"
+            ],
+            "*.+(css|less|scss|sass)": "stylelint --fix"
           }
           fs.writeFileSync(packagePath, JSON.stringify(configObj, null, 4), { encoding: 'utf-8' });
         }
