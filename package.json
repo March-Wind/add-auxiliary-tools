@@ -1,6 +1,6 @@
 {
   "name": "@marchyang/add-auxiliary-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "给项目加装辅助工具eslint,jest,stylelint",
   "main": "./lib/index.mjs",
   "bin": "./lib/index.mjs",
